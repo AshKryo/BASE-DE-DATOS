@@ -1,15 +1,17 @@
 import csv
 
-# Definir los datos para los 5 registros
-registros = [
-    {"id": 1;  "nombre": "Juan Pérez"; "correo": "juan.perez@mail.com"; "fecha_registro": "2024-09-15"};
-    {"id": 2; "nombre": "María García"; "correo": "maria.garcia@mail.com"; "fecha_registro": "2024-09-16"};
-    {"id": 3; "nombre": "Carlos Sánchez"; "correo": "carlos.sanchez@mail.com"; "fecha_registro": "2024-09-17"};
-    {"id": 4; "nombre": "Ana López"; "correo": "ana.lopez@mail.com"; "fecha_registro": "2024-09-18"};
-    {"id": 5; "nombre": "Luis Fernández"; "correo": "luis.fernandez@mail.com"; "fecha_registro": "2024-09-19"}
+canciones = [
+    ["Cuando te muerdes el labio", "Leiva", "2024-01-10", "Rock Pop"],
+    ["Cada vez cadáver", "Fito & Fitipaldis", "2024-02-14", "Rock"],
+    ["Seremos", "Ismael Serrano", "2024-03-05", "Cantautor"],
+    ["Energía positiva", "Celtas Cortos", "2024-04-20", "Folk Rock"],
+    ["Salto al color", "Amaral", "2024-05-12", "Pop Rock"],
+    ["Delta", "M-Clan", "2024-06-15", "Rock"],
+    ["No puedo vivir sin ti", "Los Ronaldos", "2024-07-22", "Rock"],
+    ["Veneno en la piel", "Radio Futura", "2024-08-09", "Rock en Español"],
+    ["Adiós tristeza", "Los Secretos", "2024-09-18", "Pop Rock"],
 ]
 
-# Variables de configuración
-nombre_fichero = 'canciones.csv'  # Nombre del archivo CSV
-delimitador = ';'                # Especificar el caracter usado como delimitador
-copiar_cabecera = False          # Establecer a True para copiar la cabecera, False en caso contrario
+with open('canciones.csv', mode='w', newline='', encoding='utf-8') as archivo:
+    writer = csv.writer(archivo, delimiter='|')
+    writer.writerows(canciones)a
